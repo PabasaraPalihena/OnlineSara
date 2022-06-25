@@ -47,4 +47,4 @@ const deleteItem = async (id) => {
   await item.deleteOne({ _id: ObjectId(id) });
 };
 
-module.exports(addItem, getAllItems, getItem, updateItem, updateItemCount);
+module.exports = { addItem, getAllItems, getItem, updateItem, updateItemCount };

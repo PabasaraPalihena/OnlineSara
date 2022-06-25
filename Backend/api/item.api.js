@@ -46,11 +46,11 @@ const EditItemCount = async (id, { itemCount }) => {
 const removeItem = async (id) => {
   return await deleteItem(id);
 };
-module.exports(
+module.exports = {
   InsertItem,
   retrieveAllItems,
   retrieveItem,
   EditItem,
   EditItemCount,
-  removeItem
-);
+  removeItem,
+};

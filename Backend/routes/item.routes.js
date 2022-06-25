@@ -68,3 +68,5 @@ router.delete("/:id", async (ctx) => {
   ctx.body = removeItem(id);
   ctx.response.status = 200;
 });
+
+module.exports = router;
