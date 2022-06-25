@@ -49,7 +49,20 @@ router.put("/:id", async (ctx) => {
   ctx.body = item;
 });
 
-//delete
+//update item count
+router.put("/itemcount/:id", async (ctx) => {
+  //get the id from the url
+  const id = ctx.params.id;
+  //get the update details from the body
+  let item = ctx.request.body;
+
+  item = await EditItemCount(id, item);
+
+  ctx.response.status = 200;
+  ctx.body = item;
+});
+
+//delete items
 router.delete("/:id", async (ctx) => {
   const id = ctx.params.id;
   ctx.body = removeItem(id);
