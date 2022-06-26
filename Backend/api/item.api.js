@@ -1,7 +1,7 @@
 //import the method that we exported in item.dao.js
 const {
   addItem,
-  getAllItem,
+  getAllItems,
   getItem,
   updateItem,
   updateItemCount,
@@ -18,7 +18,7 @@ const InsertItem = async ({ itemName, price, size, brand, itemCount }) => {
 
 //get Items
 const retrieveAllItems = async () => {
-  return await getAllItem();
+  return await getAllItems();
 };
 
 //get an Item
