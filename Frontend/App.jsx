@@ -17,7 +17,8 @@ export default class App extends React.Component {
  }
  render() {
     return <div>
-        <table>
+        <h3 align='center'>Table details</h3>
+        <table align='center'>
             <thead>
                 <tr>
                     <th>ID</th>
