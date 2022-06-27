@@ -2,7 +2,7 @@
 const Koa = require("koa");
 //import body-parser
 const bodyParser = require("koa-bodyparser");
-
+const cors = require("@koa/cors");
 //import the routes
 const itemroutes = require("./routes/item.routes");
 
@@ -14,6 +14,11 @@ require("./dal/index");
 
 //use body parser
 app.use(bodyParser());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 //registering the routes
 app.use(itemroutes.routes()).use(itemroutes.allowedMethods());
 
